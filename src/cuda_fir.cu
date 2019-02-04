@@ -139,7 +139,7 @@ void checkCUDAError(const char *msg)
     if( cudaSuccess != err) 
     {
         fprintf(stderr, "Cuda error: %s: %s.\n", msg, 
-                                  cudaGetErrorString( err) );
+        cudaGetErrorString( err) );
         exit(EXIT_FAILURE);
     }                         
 }
