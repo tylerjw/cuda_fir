@@ -1,0 +1,313 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cudaMemcoHo",
+				"cudaMemcpyHostToDevice\tcudaMemcpyHostToDevice"
+			],
+			[
+				"inc",
+				"include_directories\tcommand"
+			],
+			[
+				"incre",
+				"incrementArrayOnDevice"
+			],
+			[
+				"increm",
+				"incrementArrayOnHost"
+			],
+			[
+				"que",
+				"queryStart"
+			],
+			[
+				"tex",
+				"textRectObj"
+			],
+			[
+				"json",
+				"json_data"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"Track",
+				"TrackId"
+			],
+			[
+				"Race",
+				"RaceWeatherSlot2"
+			],
+			[
+				"RaceWea",
+				"RaceWeatherSlots"
+			],
+			[
+				"Tra",
+				"TrackId"
+			],
+			[
+				"lateC",
+				"lateCheckoutTime"
+			],
+			[
+				"early",
+				"earlyCheckinTime"
+			],
+			[
+				"LIB",
+				"LIBRESSLDIR"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cmak",
+				"Set Syntax: CMake"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax cud",
+				"Set Syntax: CUDA C++"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tylerjw/workspace/fir"
+	],
+	"file_history":
+	[
+		"/Users/tylerjw/workspace/sftp-config.json",
+		"/Users/tylerjw/workspace/cuda_dobbs/scripts/enableProfiler.bash",
+		"/Users/tylerjw/workspace/cuda_dobbs/scripts/.cuda_profile_config",
+		"/Users/tylerjw/Library/Application Support/Sublime Text 3/Packages/SFTP/SFTP.sublime-settings",
+		"/Users/tylerjw/workspace/cuda_dobbs/src/CMakeLists.txt",
+		"/Users/tylerjw/workspace/cuda_dobbs/CMakeLists.txt",
+		"/Users/tylerjw/workspace/cuda_dobbs/sftp-config.json",
+		"/Users/tylerjw/workspace/cuda_dobbs/scripts/cudaComputeVersion.bash",
+		"/Users/tylerjw/workspace/cuda_dobbs/Makefile",
+		"/Users/tylerjw/workspace/cuda_dobbs/cudaComputeVersion.bash",
+		"/Users/tylerjw/workspace/cuda_matrix/src/moveArrays.cu",
+		"/Users/tylerjw/workspace/cuda_matrix/src/incrementArray.cu",
+		"/Users/tylerjw/workspace/cuda_matrix/Makefile",
+		"/Users/tylerjw/workspace/cuda_matrix/CMakeLists.txt",
+		"/Users/tylerjw/workspace/cuda_matrix/sftp-config.json",
+		"/Users/tylerjw/workspace/cuda_matrix/moveArrays.cu",
+		"/Users/tylerjw/workspace/cuda_matrix/sftp.log",
+		"/Users/tylerjw/Library/Application Support/Sublime Text 3/Packages/User/SFTP.sublime-settings",
+		"/Users/tylerjw/workspace/cuda_matrix/add.cpp",
+		"/Users/tylerjw/workspace/pc2_server/python/split_data.py",
+		"/Users/tylerjw/Downloads/cpp-triplebyte-debug-section/Makefile",
+		"/Users/tylerjw/Downloads/cpp-triplebyte-debug-section/Uri.cpp",
+		"/Users/tylerjw/Downloads/cpp-triplebyte-debug-section/Crawler.cpp",
+		"/Users/tylerjw/workspace/pc2_server/data/escort1600/escort1600_race_4.json",
+		"/Users/tylerjw/workspace/pc2_server/data/sms_stats_data_copy.json",
+		"/Users/tylerjw/workspace/pc2_server/flags",
+		"/Users/tylerjw/workspace/pc2_server/server_stripped.cfg",
+		"/Users/tylerjw/workspace/pc2_server/web_files/js/sessionConfig.js",
+		"/Users/tylerjw/workspace/pc2_server/server_baseline.cfg",
+		"/Users/tylerjw/workspace/pc2_server/lua/sms_rotate/sms_rotate.lua",
+		"/Users/tylerjw/workspace/pc2_server/lua/lib_rotate/lib_rotate.lua",
+		"/Users/tylerjw/workspace/pc2_server/lua_config/sms_motd_config.json",
+		"/Users/tylerjw/workspace/pc2_server/lua/sms_motd/sms_motd_default_config.json",
+		"/Users/tylerjw/workspace/pc2_server/config_sample/server.cfg",
+		"/Users/tylerjw/workspace/pc2_server/server.cfg",
+		"/Users/tylerjw/Downloads/promo.md",
+		"/Users/tylerjw/Downloads/notes",
+		"/Users/tylerjw/workspace/lock-manager/source/airbnb.groovy",
+		"/Users/tylerjw/workspace/lock-manager/source/main.groovy",
+		"/Users/tylerjw/workspace/lock-manager/source/lock.groovy",
+		"/Users/tylerjw/workspace/lock-manager/smartapps/ethayer/lock-manager.src/lock-manager.groovy"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 319.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 165.0
+	},
+	"pinned_build_system": "",
+	"project": "fir.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

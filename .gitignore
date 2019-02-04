@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Sample files
+*.cap
+
+# Image files
+*.png
+
+# SFTP config
+sftp-config.json
+
+# Nsight Profiler files
+*.nsight-cuprof-report

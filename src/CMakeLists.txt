@@ -1,0 +1,1 @@
+add_executable(main fir.cpp cuda_fir.cu main.cpp)
