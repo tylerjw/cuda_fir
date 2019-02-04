@@ -30,19 +30,19 @@ int main(int argc, char const *argv[])
 	// parse input arguments
 	if (argc < 2)
 	{
-		std::cout << "Usage: " << argv[0] << " input cuda_out " << std::endl;
+		std::cout << "Usage: " << argv[0] << " input cpu_out cuda_out " << std::endl;
 		return 1;
 	}
 
 	// Filters
-	// Fir cpu_fir(taps, FILTER_LEN);
+	Fir cpu_fir(taps, FILTER_LEN);
 	CudaFir cuda_fir(taps, FILTER_LEN);
 
 	std::string inFilename(argv[1]);
-	// std::string cpuFilename(argv[2]);
-	std::string cudaFilename(argv[2]);
+	std::string cpuFilename(argv[2]);
+	std::string cudaFilename(argv[3]);
 	std::ifstream in (inFilename, std::ios::in | std::ios::binary);
-	// std::ofstream cpu_out (cpuFilename, std::ios::out | std::ios::binary);
+	std::ofstream cpu_out (cpuFilename, std::ios::out | std::ios::binary);
 	std::ofstream cuda_out (cudaFilename, std::ios::out | std::ios::binary);
 
 
@@ -50,7 +50,7 @@ int main(int argc, char const *argv[])
 	sampleType * inBuffer = new sampleType [cBlockLen];
 	sampleType * outBuffer = new sampleType [cBlockLen];
 
-	while (in.good() and /*cpu_out.good() and*/ cuda_out.good() and !in.eof())
+	while (in.good() and cpu_out.good() and cuda_out.good() and !in.eof())
 	{
 		try {
 			in.read((char*)inBuffer, sizeof(sampleType) * cBlockLen);
@@ -67,15 +67,15 @@ int main(int argc, char const *argv[])
 			break;
 		}
 
-		// cpu_fir.filter(inBuffer, outBuffer, length);
+		cpu_fir.filter(inBuffer, outBuffer, length);
 
-		// try {
-		// 	cpu_out.write((char*)outBuffer, sizeof(sampleType) * length);
-		// } catch (std::ostream::failure e) {
-		// 	std::cerr << "Exception writing file" << std::endl;
-		// 	std::cerr << e.what() << std::endl;
-		// 	break;
-		// }
+		try {
+			cpu_out.write((char*)outBuffer, sizeof(sampleType) * length);
+		} catch (std::ostream::failure e) {
+			std::cerr << "Exception writing file" << std::endl;
+			std::cerr << e.what() << std::endl;
+			break;
+		}
 
 		cuda_fir.filter(inBuffer, outBuffer, length);
 		
@@ -89,7 +89,7 @@ int main(int argc, char const *argv[])
 	}
 
 	in.close();
-	// cpu_out.close();
+	cpu_out.close();
 	cuda_out.close();
 
 	delete[] inBuffer;

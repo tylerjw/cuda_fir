@@ -21,11 +21,7 @@ if (NOT CUDA_TARGET_COMPUTE_CAPABILITY)
         set(CUDA_TARGET_COMPUTE_CAPABILITY_ $ENV{CUDA_SM})
     endif()
 
-    set(CUDA_TARGET_COMPUTE_CAPABILITY "${CUDA_TARGET_COMPUTE_CAPABILITY_}"
-        CACHE STRING "CUDA compute capability of the (first) CUDA device on \
-        the system, in XY format (like the X.Y format but no dot); see table \
-        of features and capabilities by capability X.Y value at \
-        https://en.wikipedia.org/wiki/CUDA#Version_features_and_specifications")
+    set(CUDA_TARGET_COMPUTE_CAPABILITY "${CUDA_TARGET_COMPUTE_CAPABILITY_}")
 
     execute_process(COMMAND 
         bash -c "echo -n $(echo ${CUDA_TARGET_COMPUTE_CAPABILITY})" 
