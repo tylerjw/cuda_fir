@@ -1,6 +1,6 @@
 # CUDA FIR filter
 
-Optimized cuda FIR filter implementation for complex samples.  Generic CPU implementation for reference.  Python code for generating and testing vectors.
+Optimized cuda FIR filter implementation for complex sample data.  Generic CPU implementation for reference.  Python code for generating and testing vectors.
 
 ## Building
 

@@ -30,7 +30,7 @@ __global__ void cudaFir(
 	int B = start + (n_copies*blockDim.x);
 	int bOffset = (n_copies*blockDim.x);
 
-	// copy 128 byte alligned sections in the middle
+	// copy 128 byte alligned sections
 	for (int i = 0; i < n_copies; i++)
 	{
 		inputShared[i*blockDim.x + threadIdx.x] =
