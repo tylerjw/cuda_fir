@@ -65,3 +65,9 @@ sftp-config.json
 
 # Sublime
 *.sublime-workspace
+
+# Python
+__pycache__/
+
+# CMake
+build/
