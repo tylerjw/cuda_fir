@@ -6,11 +6,8 @@ Optimized cuda FIR filter implementation for complex sample data.  Generic CPU i
 
 You will need a working install of the [Cuda Development Enviroment](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) with the binary directory in your path.
 
-1. Add the compiler to your path.  Put this in your `.bashrc`:
-```bash
-# Cuda library includes
-export PATH=$PATH:/usr/local/cuda/bin
-```
+1. Follow post install steps on nvidia's website (if this is the first time using cuda):
+[Post install instructions](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions)
 
 2. Checkout the code
 ```bash
