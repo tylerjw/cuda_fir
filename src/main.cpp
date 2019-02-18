@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 	const size_t cBlockLen = (size_t)20e6;
 
 	// parse input arguments
-	if (argc < 2)
+	if (argc < 3)
 	{
 		std::cout << "Usage: " << argv[0] << " input cpu_out cuda_out " << std::endl;
 		return 1;
