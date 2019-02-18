@@ -67,6 +67,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1509,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/main.cpp",
+			"settings":
+			{
+				"buffer_size": 3081,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -136,7 +154,8 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/tylerjw/workspace/fir"
+		"/home/tyler/workspace/cuda_fir",
+		"/home/tyler/workspace/cuda_fir/src"
 	],
 	"file_history":
 	[
@@ -184,11 +203,11 @@
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 49.0
 	},
 	"find_in_files":
 	{
-		"height": 101.0,
+		"height": 131.0,
 		"where_history":
 		[
 		]
@@ -215,18 +234,82 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								459,
+								459
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1387,
+								1387
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 49.0
 	},
 	"input":
 	{
-		"height": 36.0
+		"height": 49.0
 	},
 	"layout":
 	{
@@ -267,7 +350,7 @@
 	"project": "fir.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 90.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -305,7 +388,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 209.0,
+	"side_bar_width": 311.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <ctime>
 #include "cuda_fir.h"
 #include "fir.h"
 
@@ -26,6 +27,7 @@ float taps[ FILTER_LEN ] =
 int main(int argc, char const *argv[])
 {
 	const size_t cBlockLen = (size_t)20e6;
+	clock_t time;
 
 	// parse input arguments
 	if (argc < 3)
@@ -67,20 +69,28 @@ int main(int argc, char const *argv[])
 			break;
 		}
 
-		cpu_fir.filter(inBuffer, outBuffer, length);
+		time = clock();
+		cuda_fir.filter(inBuffer, outBuffer, length);
+		time = clock() - time;
 
+		std::cout << "GPU FIR: " << length << " samples, " << time << " ticks, " << (static_cast<float>(time) / CLOCKS_PER_SEC) << " seconds" << std::endl;
+		
 		try {
-			cpu_out.write((char*)outBuffer, sizeof(sampleType) * length);
+			cuda_out.write((char*)outBuffer, sizeof(sampleType) * length);
 		} catch (std::ostream::failure e) {
 			std::cerr << "Exception writing file" << std::endl;
 			std::cerr << e.what() << std::endl;
 			break;
 		}
 
-		cuda_fir.filter(inBuffer, outBuffer, length);
-		
+		time = clock();
+		cpu_fir.filter(inBuffer, outBuffer, length);
+		time = clock() - time;
+
+		std::cout << "CPU FIR: " << length << " samples, " << time << " ticks, " << (static_cast<float>(time) / CLOCKS_PER_SEC) << " seconds" << std::endl;
+
 		try {
-			cuda_out.write((char*)outBuffer, sizeof(sampleType) * length);
+			cpu_out.write((char*)outBuffer, sizeof(sampleType) * length);
 		} catch (std::ostream::failure e) {
 			std::cerr << "Exception writing file" << std::endl;
 			std::cerr << e.what() << std::endl;
