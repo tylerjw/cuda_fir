@@ -62,3 +62,6 @@ sftp-config.json
 
 # Nsight Profiler files
 *.nsight-cuprof-report
+
+# Sublime
+*.sublime-workspace
