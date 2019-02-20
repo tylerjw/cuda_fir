@@ -16,8 +16,6 @@ public:
 		size_t length);
 
 private:
-	void resizeState(size_t length);
-
 	float * taps;
 	const size_t cTapsLen;
 	sampleType * state;
