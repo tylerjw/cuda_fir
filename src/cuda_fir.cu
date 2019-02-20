@@ -4,13 +4,12 @@
 #include <sstream>
 #include <cuda.h>
 #include "cuda_fir.h"
+#include "cuda_error.h"
 
 // block width must be wider than number of taps
 #define BLOCK_WIDTH     1024
 #define MAX_N_TAPS      100
 #define SHARED_WIDTH    (MAX_N_TAPS - 1 + BLOCK_WIDTH)
-
-void checkCUDAError(const char* msg);
 
 __global__ void cudaFir(
     float *taps, const size_t n_taps, 
@@ -131,15 +130,4 @@ void CudaFir::filter(sampleType* input, sampleType* output, size_t length)
     cudaFree(dtaps);
     cudaFree(dout);
     cudaFree(din);
-}
-
-void checkCUDAError(const char *msg)
-{
-    cudaError_t err = cudaGetLastError();
-    if( cudaSuccess != err) 
-    {
-        fprintf(stderr, "Cuda error: %s: %s.\n", msg, 
-        cudaGetErrorString( err) );
-        exit(EXIT_FAILURE);
-    }                         
 }
