@@ -10,58 +10,6 @@
 #define MAX_N_TAPS      100
 #define SHARED_WIDTH    (MAX_N_TAPS - 1 + BLOCK_WIDTH)
 
-__global__ void cudaFir(
-    float *taps, const size_t n_taps, 
-    float2* input, 
-    float2* output,
-    size_t length)
-{
-    int remaining_outputs = length-blockDim.x*blockIdx.x;
-    int n_outputs = (blockDim.x > remaining_outputs ? remaining_outputs : blockDim.x);
-    int sharedWidth = n_taps-1 + n_outputs;
-    __shared__ float2 inputShared[SHARED_WIDTH];
-    __shared__ float sharedTaps[MAX_N_TAPS];
-
-    int start = blockDim.x*blockIdx.x;
-    int end = start+sharedWidth;
-    int n_copies = ((end-start)/blockDim.x);
-    int B = start + (n_copies*blockDim.x);
-    int bOffset = (n_copies*blockDim.x);
-
-    // copy 128 byte alligned sections
-    for (int i = 0; i < n_copies; i++)
-    {
-        inputShared[i*blockDim.x + threadIdx.x] =
-            input[start + i*blockDim.x + threadIdx.x];
-    }
-
-    // copy end
-    if ((B+threadIdx.x) < end)
-    {
-        inputShared[bOffset+threadIdx.x] = input[B+threadIdx.x];
-    }
-
-    // copy taps into shared memory
-    if (threadIdx.x < n_taps)
-    {
-        sharedTaps[threadIdx.x] = taps[threadIdx.x];
-    }
-
-    __syncthreads();
-
-    if ((start + threadIdx.x) < length)
-    {
-        float2 acc = make_float2(0.f,0.f);
-
-        for (size_t j = 0; j < n_taps; j++)
-        {
-            acc.x += inputShared[threadIdx.x+j].x*sharedTaps[j]; 
-            acc.y += inputShared[threadIdx.x+j].y*sharedTaps[j];
-        }
-        output[start + threadIdx.x] = acc;
-    }
-}
->>>>>>> upstream/master
 
 cudaCmix::cudaCmix(float* coeffs, size_t length)
     : cTapsLen(length)
