@@ -1,15 +1,15 @@
-#ifndef CUDA_FIR_H
-#define CUDA_FIR_H
+#ifndef CUDA_CMIX_H
+#define CUDA_CMIX_H
 
 #include <complex>
 
 typedef std::complex<float> sampleType;
 
-class CudaFir 
+class cudaCmix 
 {
 public:
-	CudaFir(float* coeffs, size_t length);
-	~CudaFir();
+	cudaCmix(float* coeffs, size_t length);
+	~cudaCmix();
 
 	void filter(sampleType * input, 
 		sampleType * output, 
@@ -24,4 +24,4 @@ private:
 	size_t stateLen;
 };
 
-#endif // CUDA_FIR_H
+#endif // CUDA_CMIX_H
